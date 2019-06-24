@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Create Users</h1>
-    {!!Form::open(['method'=>'POST','action'=>'AdminUsersController@store','flies'=>true])!!}
+    {!!Form::open(['method'=>'POST','action'=>'AdminUsersController@store','files'=>true])!!}
 
         <div class="form-group">
             {!!Form::label('name','Name:')!!}
@@ -16,7 +16,7 @@
 
         <div class="form-group">
             {!!Form::label('role_id','Role:')!!}
-            {!!Form::select('name',$roles,null,['class'=>'form-control','placeholder'=>'Select role...'])!!}
+            {!!Form::select('role_id',$roles,null,['class'=>'form-control','placeholder'=>'Select role...'])!!}
         </div>
 
         <div class="form-group">
@@ -25,8 +25,8 @@
         </div>
 
         <div class="form-group">
-            {!!Form::label('file','File:')!!}
-            {!!Form::file('file',null,['class'=>'form-control'])!!}
+            {!!Form::label('photo_id','Photos:')!!}
+            {!!Form::file('photo_id',null,['class'=>'form-control'])!!}
         </div>
 
         <div class="form-group">
