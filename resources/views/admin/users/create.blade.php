@@ -35,7 +35,7 @@
         </div>
 
         <div class="form-group">
-            {!!Form::submit('Create Post',['class'=>'btn btn-success'])!!}
+            {!!Form::submit('Create User',['class'=>'btn btn-success'])!!}
         </div>
     {!!Form::close()!!}
 
