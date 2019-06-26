@@ -3,7 +3,7 @@
 @section('content')
     <h1>Edit Users</h1>
     <div class="col-sm-3">
-        <img src="{{$user->photo? $user->photo->file:'https://via.placeholder.com/150'}}" alt="" class="img-responsive img-rounded">
+        <img src="{{$user->photo? $user->photo->file:'https://yak-ridge.com/wp-content/uploads/2019/04/image-placeholder-350x350.png'}}" alt="" class="img-responsive img-rounded">
 
     </div>
     
@@ -51,9 +51,5 @@
             </div>
 
         {!!Form::close()!!}
-
-    <div class="">
-        <strong>@include('includes.form_errors')</strong>
-    </div>
-   
+   </div>
 @endsection
