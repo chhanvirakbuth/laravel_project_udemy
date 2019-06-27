@@ -9,6 +9,7 @@ use App\Http\Requests\PostsCreateRequest;
 use App\Post;
 use App\Photo;
 use App\Category;
+use App\Comment;
 
 class AdminPostsController extends Controller
 {
@@ -74,6 +75,7 @@ class AdminPostsController extends Controller
     public function show($id)
     {
         //
+        
     }
 
     /**
@@ -127,5 +129,16 @@ class AdminPostsController extends Controller
         $post->delete();
         Session::flash('deleted_post','post has been deleted');
         return redirect('admin/posts');
+    }
+
+    public function post($id){
+        $post=Post::findOrFail($id);
+        $categories=Category::all();
+        $comments=$post->comments()->get();
+        return view('post',compact('post','categories','comments'));
+    }
+
+    public function home(){
+        return view('home');
     }
 }

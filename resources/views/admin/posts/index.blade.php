@@ -17,7 +17,7 @@
         <th>Photo</th>
         <th>Created</th>
         <th>Updated</th>
-        <th>Edit</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -33,7 +33,10 @@
         <td><img height='50' class="img-rounded" src="{{$post->photo ? $post->photo->file:'https://unlimitedpassion.co.uk/wp-content/uploads/2016/06/placeholder4.png'}}"></td>
         <td>{{$post->created_at->diffForHumans()}}</td>
         <td>{{$post->updated_at->diffForHumans()}}</td>
-        <td><a class="btn btn-danger" href="{{route('admin.posts.edit',$post->id)}}">Edit</a></td>
+        <td>
+          <a class="btn btn-info" href="{{route('home.post',$post->id)}}">View</a>
+          <a class="btn btn-info" href="{{route('admin.comments.show',$post->id)}}">Cmt</a>
+          <a class="btn btn-danger" href="{{route('admin.posts.edit',$post->id)}}">Edit</a></td>
       </tr>
         @endforeach
       @endif
