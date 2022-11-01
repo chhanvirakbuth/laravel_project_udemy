@@ -7,7 +7,7 @@
   "devDependencies": {
     "bootstrap-sass": "^3.0.0",
     "box-shadows-css": "^1.0.51",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "laravel-elixir": "*"
   }
 }
